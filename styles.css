@@ -13,6 +13,34 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+/*Paars #5722CD;*/
+/*Blauw #4845E4;*/
+/*Roze #ED4385;*/
+/*Zwart #0C0C0C (voor standaard tekst);*/
+/*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services")
+Uitzonderingen:*/
+/*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+/*!*Grijs #7A7A7A (voor de service-tegel tekst); */
+/*font-family: 'Merriweather', serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --standard-text-black: #0C0C0C;
+    --bg-text-lightpurple: #F2F0FF;
+    --main-text-purple: #5722CD;
+    --bg-color: #4845E4;
+    --button-color: #ED4385;
+    --bg-projects-lightgrey: #F3F6F9;
+    --tiles-text-grey: #7A7A7A;
+
+}
+
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
