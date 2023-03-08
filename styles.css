@@ -28,13 +28,14 @@ Uitzonderingen:*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*border: 1px solid indianred;*/
 }
 
 :root {
     --standard-text-black: #0C0C0C;
     --bg-text-lightpurple: #F2F0FF;
-    --main-text-purple: #5722CD;
-    --bg-color: #4845E4;
+    --bg-color-blue: #4845E4;
+    --color-purple: #5722CD;
     --button-color: #ED4385;
     --bg-projects-lightgrey: #F3F6F9;
     --tiles-text-grey: #7A7A7A;
@@ -44,16 +45,213 @@ Uitzonderingen:*/
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Arial, serif;
+    font-weight: normal;
+}
+
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+
+.outer-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 1200px;
+    margin-inline: 20px;
+}
+
 /* --------------- 3.2 Other --------------------------- */
+
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 24px;
+    /*font-weight: normal;*/
+}
+
+button {
+    background-color: var(--button-color);
+    border-radius: 45px;
+    padding: 17px 25px;
+    color: white;
+    border: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 4px rgba(0, 2, 0, 0.15);
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+.header, .form-outer {
+    background: rgb(72, 69, 228);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 15%, rgba(87, 34, 205, 1) 90%);
+    position: relative;
+    color: white;
+}
+
+.header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 78px;
+    height: 80px;
+    left: calc(50% - 39px);
+    background-image: url('/assets/squiggle_line_stripe.svg');
+
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navigation > ul > li {
+    list-style: none;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+
+.navigation a {
+    color: white;
+}
+
+.header-title {
+
+    padding: 100px 200px 200px 200px;
+}
+
+.header-title h2, h5 {
+    padding: 20px;
+}
+
 
 /* --------------- 4.2 Introduction ------------------- */
+.introduction {
+    padding: 80px;
+
+}
+.introduction h3 {
+    color: var(--color-purple);
+    padding: 10px 0;
+}
+
+.introduction p {
+    padding: 70px 0 0 0;
+    font-size: 16px;
+}
+
+.introduction a {
+    color: var(--color-purple);
+}
+
+/* --------------- 4.3 Projects ------------------- */
+
+.case-studies-articles {
+    background-color: var(--bg-projects-lightgrey);
+}
+
+.case-studies-articles article{
+    display: flex;
+    padding: 0 0 55px 0;
+    justify-content: space-between;
+    flex: 0 1 auto;
+}
+
+.case-studies-articles article:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+#case-studies {
+    padding: 70px 0;
+}
+
+.case-studies-articles div {
+    display: flex;
+    flex-direction: column;
+    /*align-items: flex-start;*/
+    text-align: left;
+    justify-content: center;
+    max-width: 350px;
+    flex-shrink: 1;
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.case-studies-articles h3, p {
+    padding: 50px 0;
+}
+
+.case-studies-articles h3::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 57px;
+    height: 6px;
+    bottom: 55%;
+    background-image: url('/assets/squiggle_line.svg');
+}
+
+.case-studies-articles img {
+    width: 100%;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.case-studies-articles a {
+    text-transform: uppercase;
+    color: var(--bg-color-blue);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* --------------- 4.4 Services ------------------- */
+.services article {
+    border: 1px solid var(--bg-color-blue)
+}
+
+
+
+
+/* --------------- Form ------------------- */
+
+.form button {
+    padding: 15px 50px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
