@@ -133,17 +133,18 @@
             <div class="form-outer outer-container">
                 <section id="contact-us" class="form inner-container">
                     <h2>Let's work together</h2>
-                    <h5>Have a question? Need a quote? Let us know!</h5>
+                    <p>Have a question? Need a quote? Let us know!</p>
                     <form onsubmit="hier-is-javascript-voor-nodig">
-                        <p>Name</p>
-                        <input type="text" name="name" id="name" placeholder="Name">
-                        <p>Email</p>
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <p>Message</p>
-                        <input type="text" name="message" id="message" placeholder="Message">
-                        <button type="submit">
+                        <label for="name-field">Name</label>
+                        <input type="text" name="name" id="name-field" placeholder="Name">
+                        <label for="email-field">Email</label>
+                        <input type="email" name="email" id="email-field" placeholder="Email">
+                        <label for="message-field">Message</label>
+                        <textarea name="message" id="message-field" cols="30" rows="10" placeholder="Message"></textarea>
+                        <div class="button-container"><button type="submit">
                             Send
                         </button>
+                        </div>
                     </form>
                 </section>
             </div>

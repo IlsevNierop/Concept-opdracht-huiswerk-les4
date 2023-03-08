@@ -49,6 +49,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     text-align: center;
     font-weight: normal;
+    color: var(--standard-text-black);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,15 +87,21 @@ a {
 h1 {
     font-size: 40px;
 }
-
+h2 {
+    font-size: 36px;
+}
 h3 {
     font-size: 28px;
 }
 
+h4 {
+    font-size: 22px;
+}
+
 h5 {
     font-size: 24px;
-    /*font-weight: normal;*/
 }
+
 
 button {
     background-color: var(--button-color);
@@ -150,7 +157,7 @@ button {
     padding: 100px 200px 200px 200px;
 }
 
-.header-title h2, h5 {
+.header-title h2, .header-title h5 {
     padding: 20px;
 }
 
@@ -198,7 +205,6 @@ button {
 .case-studies-articles div {
     display: flex;
     flex-direction: column;
-    /*align-items: flex-start;*/
     text-align: left;
     justify-content: center;
     max-width: 350px;
@@ -208,7 +214,7 @@ button {
     padding-left: 30px;
 }
 
-.case-studies-articles h3, p {
+.case-studies-articles h3, .case-studies-articles p {
     padding: 50px 0;
 }
 
@@ -241,17 +247,99 @@ button {
 }
 
 /* --------------- 4.4 Services ------------------- */
-.services article {
-    border: 1px solid var(--bg-color-blue)
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 70px;
+}
+
+.services > article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px;
+    border: 1px solid var(--bg-color-blue);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    flex:1 1 30vw;
+}
+
+.services img {
+
+    width: 50px;
+    height: 50px;
+}
+
+.services h4{
+    color: var(--color-purple);
+    padding: 10px 0 20px 0;
+}
+.services p {
+    font-weight: light;
+    color: var(--tiles-text-grey);
+    font-size: 14px;
 }
 
 
 
+/* --------------- 4.5 Form ------------------- */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 50px 0;
 
-/* --------------- Form ------------------- */
+}
 
-.form button {
-    padding: 15px 50px;
+.form p {
+    padding: 20px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*hoe kan ik de width mee laten shrinken? */
+    flex:1 1 auto;
+    width: 600px;
+}
+
+.form input ,.form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+::placeholder {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.button-container button {
+    margin-top: 10px;
+    padding: 20px 60px;
+    display: flex;
+
+}
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    background-color: var(--standard-text-black);
+    color: white;
+    padding: 20px;
+    font-size: 12px;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
